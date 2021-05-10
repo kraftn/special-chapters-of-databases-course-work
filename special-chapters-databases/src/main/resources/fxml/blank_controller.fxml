@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.databases.client.controllers.BlankController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Коллекции">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#showCoinsTable" text="Монеты" />
+                  <MenuItem mnemonicParsing="false" onAction="#showStampsTable" text="Марки" />
+                  <MenuItem mnemonicParsing="false" onAction="#showBooksTable" text="Книги" />
+                  <MenuItem mnemonicParsing="false" onAction="#showPaintingsTable" text="Картины" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Действия">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#calculateWorth" text="Найти стоимость коллекций" />
+                  <MenuItem mnemonicParsing="false" onAction="#findItemsByDate" text="Найти предметы по дате поступления в коллекцию" />
+                  <MenuItem mnemonicParsing="false" onAction="#findItemsByWorth" text="Найти предметы по стоимости" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Поиск монет">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#findCoinsBySeries" text="Найти монеты из одной серии" />
+                <MenuItem mnemonicParsing="false" onAction="#findCoinsByEdition" text="Найти монеты по тиражу" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Поиск марок">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#findStampsBySeries" text="Найти марки из одной серии" />
+                <MenuItem mnemonicParsing="false" onAction="#findStampsByEdition" text="Найти марки по тиражу" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Поиск книг">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#findBooksByAuthor" text="Найти книги одного автора" />
+                  <MenuItem mnemonicParsing="false" onAction="#findBooksByEdition" text="Найти книги по тиражу" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Поиск картин">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#findPaintingsByArtist" text="Найти картины одного художника" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false">
+                <graphic>
+                    <Label onMouseClicked="#close" text="Выйти" />
+                </graphic>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <BorderPane fx:id="bpLayout" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Выберите пункт меню" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <Label fx:id="lTitle" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>

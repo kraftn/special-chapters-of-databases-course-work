@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.databases.client.controllers.StampController">
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="260.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="52.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <StackPane alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="19">
+                <children>
+                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#cancel" text="Закрыть" StackPane.alignment="CENTER_RIGHT" />
+                    <Button fx:id="bOk" alignment="CENTER" mnemonicParsing="false" onAction="#ok" text="Сохранить" StackPane.alignment="CENTER_RIGHT">
+                        <StackPane.margin>
+                            <Insets right="70.0" />
+                        </StackPane.margin>
+                    </Button>
+                </children>
+            </StackPane>
+            <Label text="Фамилия" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+                <GridPane.margin>
+                    <Insets right="10.0" />
+                </GridPane.margin>
+            </Label>
+            <Label text="Отчество" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+                <GridPane.margin>
+                    <Insets right="10.0" />
+                </GridPane.margin>
+            </Label>
+            <ImageView fx:id="ivPicture" fitHeight="96.0" fitWidth="96.0" onMouseClicked="#onImageClicked" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowSpan="5" GridPane.valignment="CENTER">
+            <image>
+               <Image url="@../add_photo.png" />
+            </image>
+            <viewport>
+               <Rectangle2D />
+            </viewport></ImageView>
+            <Label text="Название" GridPane.columnIndex="1">
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+            </Label>
+            <TextField fx:id="tfItemName" promptText="Название" GridPane.columnIndex="2" />
+            <Label text="Год выпуска" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="tfCreationYear" promptText="Год выпуска" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Дата поступления в коллекцию" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Стоимость" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="tfWorth" promptText="Стоимость, рубли" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="tfSurname" promptText="Фамилия" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+            <Label text="Имя" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+                <GridPane.margin>
+                    <Insets right="10.0" />
+                </GridPane.margin>
+            </Label>
+            <TextField fx:id="tfName" promptText="Имя" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+            <TextField fx:id="tfPatronymic" promptText="Отчество" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+            <Label text="Номинал" GridPane.halignment="RIGHT" GridPane.rowIndex="10">
+                <GridPane.margin>
+                    <Insets right="10.0" />
+                </GridPane.margin>
+            </Label>
+            <Label text="Денежная единица" GridPane.halignment="RIGHT" GridPane.rowIndex="11">
+                <GridPane.margin>
+                    <Insets right="10.0" />
+                </GridPane.margin>
+            </Label>
+            <Label text="Тираж" GridPane.halignment="RIGHT" GridPane.rowIndex="12">
+                <GridPane.margin>
+                    <Insets right="10.0" />
+                </GridPane.margin>
+            </Label>
+            <Label text="Тип перфорации" GridPane.halignment="RIGHT" GridPane.rowIndex="14">
+                <GridPane.margin>
+                    <Insets right="10.0" />
+                </GridPane.margin>
+            </Label>
+            <Label text="Размер зубцовки:" GridPane.halignment="RIGHT" GridPane.rowIndex="15">
+                <GridPane.margin>
+                    <Insets right="10.0" />
+                </GridPane.margin>
+            </Label>
+            <TextField fx:id="tfDenominationValue" promptText="Номинал" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="10" />
+            <TextField fx:id="tfMonetaryUnit" promptText="Денежная единица" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="11" />
+            <TextField fx:id="tfEdition" promptText="Тираж" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="12" />
+            <TextField fx:id="tfTop" promptText="верхняя сторона" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
+                <children>
+                    <Label text="Художник" HBox.hgrow="NEVER" />
+                    <Separator HBox.hgrow="SOMETIMES">
+                        <HBox.margin>
+                            <Insets left="10.0" />
+                        </HBox.margin>
+                    </Separator>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="9">
+                <children>
+                    <Label text="Общая информация" />
+                    <Separator HBox.hgrow="SOMETIMES">
+                        <HBox.margin>
+                            <Insets left="10.0" />
+                        </HBox.margin>
+                    </Separator>
+                </children>
+            </HBox>
+         <DatePicker fx:id="dpEnteringDate" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+         <Label text="Тип печати" GridPane.halignment="RIGHT" GridPane.rowIndex="13">
+            <GridPane.margin>
+               <Insets right="10.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Серия" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <TextField fx:id="tfSeries" promptText="Серия" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         <ComboBox fx:id="cbPrinting" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="13" />
+         <ComboBox fx:id="cbPerforation" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="14" />
+         <Label text="верхняя сторона" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="15">
+            <GridPane.margin>
+               <Insets left="20.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="правая сторона" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="16">
+            <GridPane.margin>
+               <Insets left="20.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="нижняя сторона" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="17">
+            <GridPane.margin>
+               <Insets left="20.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="левая сторона" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="18">
+            <GridPane.margin>
+               <Insets left="20.0" />
+            </GridPane.margin>
+         </Label>
+         <TextField fx:id="tfRight" promptText="правая сторона" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+         <TextField fx:id="tfBottom" promptText="нижняя сторона" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+         <TextField fx:id="tfLeft" promptText="левая сторона" GridPane.columnIndex="2" GridPane.rowIndex="18" />
+        </children>
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+        </padding>
+    </GridPane>
+</ScrollPane>
